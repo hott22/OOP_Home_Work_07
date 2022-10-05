@@ -6,8 +6,10 @@ public class SquareDialog implements IDialog {
 
     @Override
     public Double [] showDialog() {
-        System.out.printf("Введите сторону: ");
+        System.out.print("Введите сторону: ");
         double s = in.nextDouble();
+        in.close();
         return new Double[]{s, s, s, s};
+
     } 
 }

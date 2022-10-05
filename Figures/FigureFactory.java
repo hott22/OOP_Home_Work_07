@@ -1,3 +1,5 @@
+package Figures;
+
 import Figures.*;
 import Exception.*;
 

@@ -1,38 +1,14 @@
+package Repository;
+
 import Figures.Circle;
 import Figures.IFigure;
 import Figures.Polygon;
 
-import java.util.ArrayList;
-
-public class FigureRepository {
-
-    ArrayList<IFigure> figures;
-
-
-    public void add(IFigure figure){
-        figures.add(figure);
-    }
-
-    public void remove(IFigure figure){
-        figures.remove(figure);
-
-    }
-
-    public void remove(int index){
-        figures.remove(index);
-    }
-
-    public ArrayList<IFigure> getFigures() {
-        return figures;
-    }
-
-    public void setFigures(ArrayList<IFigure> figures) {
-        this.figures = figures;
-    }
+public class FigureRepository extends Repository<IFigure> {
 
     public double[] getPerimeters(){
         int count = 0;
-        for (IFigure figure : figures) {
+        for (Object figure : figures) {
             if (!figure.getClass().getSimpleName().equals("Circle")) {
                 count++;
             }
@@ -61,7 +37,7 @@ public class FigureRepository {
 
     public double[] getLengths(){
         int count = 0;
-        for (IFigure figure : figures) {
+        for (Object figure : figures) {
             if (figure.getClass().getSimpleName().equals("Circle")) {
                 count++;
             }
