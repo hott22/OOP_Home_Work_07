@@ -2,8 +2,8 @@ package Dialog;
 import java.util.Scanner;
 
 public class RectangleDialog implements IDialog{
-    public Double[] showDialog(){
-        Double[] array = new Double[4];
+    public double[] showDialog(){
+        double[] array = new double[4];
         Scanner scanner = new Scanner(System.in);
         System.out.println("First side: ");
         double firstSide = scanner.nextDouble();
@@ -13,7 +13,7 @@ public class RectangleDialog implements IDialog{
         double secondSide = scanner.nextDouble();
         array[1] = secondSide;
         array[3] = secondSide;
-        scanner.close();
+        //scanner.close();
 
         return array;
     }

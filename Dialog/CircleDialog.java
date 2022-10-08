@@ -5,12 +5,13 @@ import java.util.Scanner;
 public class CircleDialog implements IDialog{
 
     @Override
-    public Double[] showDialog() {
-        Double[] array = new Double[1];
+    public double[] showDialog() {
+        double[] array = new double[1];
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter radius");
         double radius = scanner.nextDouble();
         array[0] = radius;
-        scanner.close();
+        //scanner.close();
 
         return array;
     }

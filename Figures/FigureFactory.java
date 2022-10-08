@@ -1,19 +1,41 @@
 package Figures;
-
-import Figures.*;
 import Exception.*;
 
 public class FigureFactory {
 
-    public IFigure CreateFigure(int figureType, double [] parameters) throws IncorrectSideException, IncorrectRadiusException {
+    public IFigure createFigure(int figureType, double [] parameters) {
+        switch (figureType) {
+            case 1 -> {
+                try {
+                    return new Triangle(parameters[0], parameters[1], parameters[2]);
+                } catch (IncorrectSideException e) {
+                    System.out.println("wrong triangle sides");
+                }
+            }
+            case 2 -> {
+                try {
+                    return new Rectangle(parameters[0], parameters[1]);
+                } catch (IncorrectSideException e) {
+                    System.out.println("wrong rectangle sides");
 
-        return switch (figureType) {
-            case 1 -> new Triangle(parameters[0], parameters[1], parameters[2]);
-            case 2 -> new Rectangle(parameters[0], parameters[1]);
-            case 3 -> new Square(parameters[0]);
-            case 4 -> new Circle(parameters[0]);
-            default -> throw new IllegalStateException("Unexpected value: " + figureType);
-        };
+                }
+            }
+            case 3 -> {
+                try {
+                    return new Square(parameters[0]);
+                } catch (IncorrectSideException n) {
+                    System.out.println("wrong square sides");
+                }
+            }
+            case 4 -> {
+                try {
+                    return new Circle(parameters[0]);
+                } catch (IncorrectRadiusException e) {
+                    System.out.println("wrong circle radius");
+                }
+            }
+        }
 
+        return null;
     }
 }

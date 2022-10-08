@@ -1,5 +1,5 @@
 package Dialog;
 
 public interface IDialog {
-    Double[] showDialog();
+    double[] showDialog();
 }

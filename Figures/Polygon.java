@@ -1,5 +1,5 @@
 package Figures;
-import Exception.IncorrectSideException;
+import Exception.*;
 public abstract class Polygon implements IPerimeterable, IFigure{
     protected double[] sides;
 

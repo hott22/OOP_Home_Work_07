@@ -4,10 +4,12 @@ import java.util.ArrayList;
 
 public class Repository<T> {
 
-    protected ArrayList<T> figures;
+    protected ArrayList<T> figures = new ArrayList<T>();
 
     public void add(T figure) {
-        figures.add(figure);
+        if(figure != null){
+            figures.add(figure);
+        }
     }
 
     public void remove(T figure) {

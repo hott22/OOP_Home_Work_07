@@ -3,10 +3,9 @@ import Exception.IncorrectSideException;
 public class Triangle extends Polygon {
 
     public Triangle (double side1, double side2, double side3) throws IncorrectSideException {
-
         super (new double [] {side1,side2,side3});
         if ( side1+side2 <= side3 || side2+side3 <= side1 || side1+side3 <= side2 || side1 <=0 || side2 <=0 || side3 <=0)
-                throw new IncorrectSideException("Некорректно заданы стороны треугольника");
+                throw new IncorrectSideException("Entered wrong triangle sides");
     }
             
     @Override

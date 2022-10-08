@@ -2,17 +2,18 @@ package Dialog;
 import java.util.Scanner;
 
 public class TriangleDialog implements IDialog {
-    Scanner in;
+
 
 @Override
-public Double[] showDialog() {
-   Double [] sideArray = new Double [3];
+public double[] showDialog() {
+    Scanner in = new Scanner(System.in);
+   double [] sideArray = new double [3];
    for (int i=0; i<3; i++){
-    System.out.printf("%s %d%n", "Введите сторону ", i+1);
+    System.out.printf("%s %d\n", "Enter side ", i+1);
     double s = in.nextDouble();
     sideArray[i] = s;
    }
-   in.close();
+   //in.close();
    return sideArray; 
 }
 }

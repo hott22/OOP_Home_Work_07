@@ -14,7 +14,7 @@ public class Controller {
     }
 
     public void addFigure(int figureType, double[] parameters) throws IncorrectRadiusException, IncorrectSideException {
-        figureRepository.add(figureCreater.CreateFigure(figureType,parameters));
+        figureRepository.add(figureCreater.createFigure(figureType,parameters));
     }
 
     public double[] getPerimeters(){
